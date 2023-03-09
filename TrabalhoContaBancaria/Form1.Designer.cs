@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Nome = new System.Windows.Forms.TextBox();
+            this.Saldo = new System.Windows.Forms.Label();
             this.Numero = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,8 +50,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.Nome);
+            this.groupBox1.Controls.Add(this.Saldo);
             this.groupBox1.Controls.Add(this.Numero);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -64,22 +64,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conta à Ordem";
             // 
-            // textBox2
+            // Nome
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(274, 22);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Tintim";
+            this.Nome.Location = new System.Drawing.Point(114, 62);
+            this.Nome.Name = "Nome";
+            this.Nome.Size = new System.Drawing.Size(274, 22);
+            this.Nome.TabIndex = 5;
             // 
-            // label7
+            // Saldo
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(111, 115);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 16);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "10 000,00 €";
+            this.Saldo.AutoSize = true;
+            this.Saldo.Location = new System.Drawing.Point(111, 115);
+            this.Saldo.Name = "Saldo";
+            this.Saldo.Size = new System.Drawing.Size(0, 16);
+            this.Saldo.TabIndex = 4;
             // 
             // Numero
             // 
@@ -239,8 +237,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox Nome;
+        private System.Windows.Forms.Label Saldo;
         private System.Windows.Forms.Label Numero;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
