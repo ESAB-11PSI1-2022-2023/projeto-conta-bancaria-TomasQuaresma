@@ -43,5 +43,25 @@ namespace TrabalhoContaBancaria
             this.Left = X + MousePosition.X;
             this.Top = Y + MousePosition.Y;
         }
+
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+            label1.Font = new Font(label1.Font, FontStyle.Underline);
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            label1.Font = new Font(label1.Font, FontStyle.Regular);
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

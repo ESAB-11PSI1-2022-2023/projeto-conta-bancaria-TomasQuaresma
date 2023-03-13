@@ -52,7 +52,8 @@ namespace TrabalhoContaBancaria
         /// </summary>
         public void Transferir(ContaBancaria contaDestino, decimal quantia)
         {
-            
+            Saldo -= quantia;
+            contaDestino.Saldo += quantia;
         }
     }
 }
