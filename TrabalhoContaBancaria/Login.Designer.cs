@@ -35,12 +35,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
@@ -144,6 +144,8 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "──────────────   ou   ──────────────";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
             // 
             // panel1
             // 
@@ -176,6 +178,19 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(326, 58);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(320, 23);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Endereço de e-mail ou número de telemóvel";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -189,19 +204,6 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(320, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Endereço de e-mail ou número de telemóvel";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel3
             // 
@@ -222,18 +224,20 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(334, 51);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
-            // label4
+            // label6
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 51);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Português";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(177, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(154, 51);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "English";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
+            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
             // 
             // label5
             // 
@@ -247,19 +251,23 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "|";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
             // 
-            // label6
+            // label4
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(177, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 51);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "English";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 51);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Português";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
             // 
             // tableLayoutPanel4
             // 
