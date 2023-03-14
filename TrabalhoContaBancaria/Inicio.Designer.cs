@@ -1,6 +1,6 @@
 ﻿namespace TrabalhoContaBancaria
 {
-    partial class Form1
+    partial class Inicio
     {
         /// <summary>
         /// Variável de designer necessária.

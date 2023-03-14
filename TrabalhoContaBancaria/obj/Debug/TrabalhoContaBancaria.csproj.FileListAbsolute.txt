@@ -3,10 +3,10 @@ C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoCont
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\bin\Debug\TrabalhoContaBancaria.pdb
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.csproj.AssemblyReference.cache
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.csproj.SuggestedBindingRedirects.cache
-C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.Form1.resources
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.Properties.Resources.resources
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.csproj.GenerateResource.cache
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.csproj.CoreCompileInputs.cache
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.exe
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.pdb
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.Login.resources
+C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.Inicio.resources

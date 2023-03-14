@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -15,6 +16,8 @@ namespace TrabalhoContaBancaria
     {
         int X = 0;
         int Y = 0;
+        string Email { get; set; }
+        string Password { get; set; }
 
         //Ativar Arredondar Cantos
         public enum DWMWINDOWATTRIBUTE
@@ -68,22 +71,104 @@ namespace TrabalhoContaBancaria
 
         private void label1_MouseEnter(object sender, EventArgs e)
         {
-            label1.Font = new Font(label1.Font, FontStyle.Underline);
+            EsquecerMail.Font = new Font(EsquecerMail.Font, FontStyle.Underline);
         }
 
         private void label1_MouseLeave(object sender, EventArgs e)
         {
-            label1.Font = new Font(label1.Font, FontStyle.Regular);
+            EsquecerMail.Font = new Font(EsquecerMail.Font, FontStyle.Regular);
         }
 
-        private void textBox1_Click(object sender, EventArgs e)
+        private void Botao1_Click(object sender, EventArgs e)
         {
-           
+            switch(Botao1.Text)
+            {
+                case "Seguinte":
+                    char[]mail = TextBox1.Text.ToCharArray();
+                    if (mail.Length <= 26)
+                    {
+                        Mail.Text = TextBox1.Text;
+                    }
+                    else
+                    {
+                        for(int i = 0; i <= 23; i++)
+                        {
+                            Mail.Text += mail[i];
+                        }
+                        Mail.Text += "...";
+                    }
+
+                    AlterarMail.Visible= true;
+                    Mostrar.Visible= true;
+                    Email = TextBox1.Text;
+                    TextBox1.Text = null;
+                    TextBox1.PasswordChar = '●';
+                    Botao1.Text = "Iniciar sessão";
+                    label3.Text = "Palavra-passe";
+                    
+                    break;
+                case "Iniciar sessão":
+                    Password = TextBox1.Text;
+                    try
+                    {
+                        string[] linhas = File.ReadAllLines(@"Login.txt");
+                        foreach (string linha in linhas)
+                        {
+                            string[] valores = linha.Split(':');
+                            if (valores[0].Equals(Email) && valores[1].Equals(Password))
+                            {
+                                //MessageBox.Show("Login realizado com sucesso!");
+                                Inicio form = new Inicio();
+                                form.Show();
+                                this.Visible= false;
+                                return;
+                            }
+                        }
+                        MessageBox.Show("Usuário ou senha inválidos!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao ler o arquivo: " + ex.Message);
+                    }
+                    break;
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void AlterarMail_MouseEnter(object sender, EventArgs e)
         {
+            AlterarMail.Font = new Font(EsquecerMail.Font, FontStyle.Underline);
+        }
 
+        private void AlterarMail_MouseLeave(object sender, EventArgs e)
+        {
+            AlterarMail.Font = new Font(EsquecerMail.Font, FontStyle.Regular);
+        }
+
+        private void AlterarMail_Click(object sender, EventArgs e)
+        {
+            Mail.Text = null;
+            AlterarMail.Visible = false;
+            Mostrar.Visible = false;
+            TextBox1.Text = null;
+            TextBox1.PasswordChar = '\0';
+            Botao1.Text = "Seguinte";
+            label3.Text = "Endereço de e-mail ou número de telemóvel";
+            
+        }
+
+        private void Mostrar_Click(object sender, EventArgs e)
+        {
+            switch (Mostrar.Text)
+            {
+                case "Mostrar":
+                    Mostrar.Text = "Ocultar";
+                    TextBox1.PasswordChar = '\0';
+                    break;
+                case "Ocultar":
+                    Mostrar.Text = "Mostrar";
+                    TextBox1.PasswordChar = '●';
+                    break;
+            }
         }
     }
 }

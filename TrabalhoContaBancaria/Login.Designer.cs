@@ -29,20 +29,23 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.EsquecerMail = new System.Windows.Forms.Label();
+            this.Botao1 = new System.Windows.Forms.Button();
+            this.CriarConta = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Mail = new System.Windows.Forms.Label();
+            this.AlterarMail = new System.Windows.Forms.Label();
+            this.Mostrar = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -60,9 +63,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.EsquecerMail, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Botao1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.CriarConta, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 7);
@@ -84,52 +87,53 @@
             this.tableLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.tableLayoutPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
             // 
-            // label1
+            // EsquecerMail
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.EsquecerMail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(45, 187);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(334, 43);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Esqueceu-se do endereço de e-mail?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
-            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.EsquecerMail.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EsquecerMail.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.EsquecerMail.Location = new System.Drawing.Point(45, 187);
+            this.EsquecerMail.Name = "EsquecerMail";
+            this.EsquecerMail.Size = new System.Drawing.Size(334, 43);
+            this.EsquecerMail.TabIndex = 1;
+            this.EsquecerMail.Text = "Esqueceu-se do endereço de e-mail?";
+            this.EsquecerMail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EsquecerMail.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.EsquecerMail.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
-            // button1
+            // Botao1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Botao1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(45, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(334, 51);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Seguinte";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Botao1.BackColor = System.Drawing.Color.Navy;
+            this.Botao1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Botao1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Botao1.ForeColor = System.Drawing.Color.White;
+            this.Botao1.Location = new System.Drawing.Point(45, 233);
+            this.Botao1.Name = "Botao1";
+            this.Botao1.Size = new System.Drawing.Size(334, 51);
+            this.Botao1.TabIndex = 2;
+            this.Botao1.Text = "Seguinte";
+            this.Botao1.UseVisualStyleBackColor = false;
+            this.Botao1.Click += new System.EventHandler(this.Botao1_Click);
             // 
-            // button2
+            // CriarConta
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CriarConta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Navy;
-            this.button2.Location = new System.Drawing.Point(45, 347);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(334, 51);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Criar Conta";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CriarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CriarConta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CriarConta.ForeColor = System.Drawing.Color.Navy;
+            this.CriarConta.Location = new System.Drawing.Point(45, 347);
+            this.CriarConta.Name = "CriarConta";
+            this.CriarConta.Size = new System.Drawing.Size(334, 51);
+            this.CriarConta.TabIndex = 3;
+            this.CriarConta.Text = "Criar Conta";
+            this.CriarConta.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -166,10 +170,12 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.5F));
+            this.tableLayoutPanel2.Controls.Add(this.Mostrar, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.TextBox1, 0, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -183,6 +189,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.SetColumnSpan(this.label3, 2);
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
@@ -191,19 +198,17 @@
             this.label3.Text = "Endereço de e-mail ou número de telemóvel";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // TextBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBox1.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox1.Location = new System.Drawing.Point(3, 26);
+            this.TextBox1.Name = "TextBox1";
+            this.TextBox1.Size = new System.Drawing.Size(262, 20);
+            this.TextBox1.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
@@ -274,17 +279,20 @@
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnCount = 4;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel4.Controls.Add(this.pictureBox1, 1, 1);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.Controls.Add(this.pictureBox1, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.Mail, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.AlterarMail, 3, 1);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(45, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(334, 109);
             this.tableLayoutPanel4.TabIndex = 8;
             this.tableLayoutPanel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
@@ -297,13 +305,60 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.Paypal1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(136, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(136, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(60, 64);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
+            // 
+            // Mail
+            // 
+            this.Mail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.SetColumnSpan(this.Mail, 3);
+            this.Mail.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mail.Location = new System.Drawing.Point(3, 70);
+            this.Mail.Name = "Mail";
+            this.Mail.Size = new System.Drawing.Size(243, 39);
+            this.Mail.TabIndex = 1;
+            this.Mail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // AlterarMail
+            // 
+            this.AlterarMail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AlterarMail.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AlterarMail.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.AlterarMail.Location = new System.Drawing.Point(252, 70);
+            this.AlterarMail.Name = "AlterarMail";
+            this.AlterarMail.Size = new System.Drawing.Size(79, 39);
+            this.AlterarMail.TabIndex = 2;
+            this.AlterarMail.Text = "Alterar";
+            this.AlterarMail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AlterarMail.Visible = false;
+            this.AlterarMail.Click += new System.EventHandler(this.AlterarMail_Click);
+            this.AlterarMail.MouseEnter += new System.EventHandler(this.AlterarMail_MouseEnter);
+            this.AlterarMail.MouseLeave += new System.EventHandler(this.AlterarMail_MouseLeave);
+            // 
+            // Mostrar
+            // 
+            this.Mostrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Mostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mostrar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Mostrar.Location = new System.Drawing.Point(271, 23);
+            this.Mostrar.Name = "Mostrar";
+            this.Mostrar.Size = new System.Drawing.Size(52, 35);
+            this.Mostrar.TabIndex = 3;
+            this.Mostrar.Text = "Mostrar";
+            this.Mostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Mostrar.Visible = false;
+            this.Mostrar.Click += new System.EventHandler(this.Mostrar_Click);
             // 
             // Login
             // 
@@ -332,13 +387,13 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label EsquecerMail;
+        private System.Windows.Forms.Button Botao1;
+        private System.Windows.Forms.Button CriarConta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TextBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label6;
@@ -346,5 +401,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label Mail;
+        private System.Windows.Forms.Label AlterarMail;
+        private System.Windows.Forms.Label Mostrar;
     }
 }

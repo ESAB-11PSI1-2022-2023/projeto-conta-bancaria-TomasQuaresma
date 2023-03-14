@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace TrabalhoContaBancaria
 {
-    public partial class Form1 : Form
+    public partial class Inicio : Form
     {
         ContaBancaria Conta { get; set; }
         ContaBancaria Conta0 = new ContaBancaria("AB0001-661", "Tintim",10000);
         ContaBancaria Conta1 = new ContaBancaria("0658187233661", "Tintim", 10000);
         ContaBancaria Conta2 = new ContaBancaria("UT0023-110", "Tintim", 10000);
-        public Form1()
+        public Inicio()
         {
             InitializeComponent();
         }
