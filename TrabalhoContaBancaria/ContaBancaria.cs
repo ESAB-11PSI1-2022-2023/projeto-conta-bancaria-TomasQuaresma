@@ -13,14 +13,17 @@ namespace TrabalhoContaBancaria
     {
         //Número de conta
         public string Numero { get; set; }
+        //Email da conta
+        public string Email { get; set; }
         //Titular da conta
         public string Titular { get; set;}
         //Saldo da conta
         public decimal Saldo { get; set;}
 
-        public ContaBancaria(string numero,string titular,decimal saldo) 
+        public ContaBancaria(string numero,string email,string titular,decimal saldo) 
         { 
             Numero = numero;
+            Email = email;
             Titular = titular;
             Saldo = saldo;
         }

@@ -119,7 +119,7 @@ namespace TrabalhoContaBancaria
                             if (valores[0].Equals(Email) && valores[1].Equals(Password))
                             {
                                 Inicio form = new Inicio();
-                                form.ReceberInformacoes(Email);
+                                form.AtualizarOpcoes(Email);
                                 form.Show();
                                 this.Visible= false;
                                 return;

@@ -10,34 +10,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TrabalhoContaBancaria
 {
     public partial class Inicio : Form
     {
-        ContaBancaria Conta = new ContaBancaria("Teste", "Teste",0);
+        ContaBancaria Conta = new ContaBancaria("Teste","Email", "Teste",0);
         public Inicio()
         {
             InitializeComponent();
         }
-        public void ReceberInformacoes(string mail)
+
+        public void AtualizarOpcoes(string mail)
         {
-            string[] linhas = File.ReadAllLines(@"Contas.txt");
+            string[] linhas;
+            using (StreamReader sr = new StreamReader("Contas.txt"))
+            {
+                linhas = sr.ReadToEnd().Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            }
+
             foreach (string linha in linhas)
             {
                 string[] valores = linha.Split(':');
                 if (valores[0].Equals(mail))
                 {
                     string[] nome = valores[2].Split(' ');
-                    Conta = new ContaBancaria(valores[1], nome[0], Convert.ToDecimal(valores[3]));
+                    Conta = new ContaBancaria(valores[1], valores[0], nome[0], Convert.ToDecimal(valores[3]));
                     return;
                 }
             }
+
         }
+        public void AtualizarSaldo()
+        {
+            Saldo.Text = Conta.Saldo + " EUR";
+        }
+        
         private void Form1_Load(object sender, EventArgs e)
         {
-            
             switch (DateTime.Now.Hour)
             {
                 case int Dia when Dia >= 0 && Dia < 12:
@@ -51,17 +61,7 @@ namespace TrabalhoContaBancaria
                     break;
             }
 
-            Saldo.Text = Conta.Saldo + " EUR";
-            
-
-        }
-        
-        /// <summary>
-        /// Botão Fechar
-        /// </summary>
-        private void Fechar_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            AtualizarSaldo();
         }
 
         /// <summary>
@@ -125,59 +125,6 @@ namespace TrabalhoContaBancaria
             */
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           /* 
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0:
-                    Conta = Conta0;
-                    Numero.Text = Conta0.Numero.ToString();
-                    Nome.Text = Conta0.Titular.ToString();
-                    Saldo.Text = Conta0.Saldo.ToString() + " €";
-                    break;
-                case 1:
-                    Conta = Conta1;
-                    Numero.Text = Conta1.Numero.ToString();
-                    Nome.Text = Conta1.Titular.ToString();
-                    Saldo.Text = Conta1.Saldo.ToString() + " €";
-                    break;
-                case 2:
-                    Conta = Conta2;
-                    Numero.Text = Conta2.Numero.ToString();
-                    Nome.Text = Conta2.Titular.ToString();
-                    Saldo.Text = Conta2.Saldo.ToString() + " €";
-                    break;
-            }
-
-        }
-
-        public void AtualizarOpcoes()
-        {
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0:
-                    Conta0 = Conta;
-                    Numero.Text = Conta0.Numero.ToString();
-                    Nome.Text = Conta0.Titular.ToString();
-                    Saldo.Text = Conta0.Saldo.ToString() + " €";
-                    break;
-                case 1:
-                    Conta1 = Conta;
-                    Numero.Text = Conta1.Numero.ToString();
-                    Nome.Text = Conta1.Titular.ToString();
-                    Saldo.Text = Conta1.Saldo.ToString() + " €";
-                    break;
-                case 2:
-                    Conta2 = Conta;
-                    Numero.Text = Conta2.Numero.ToString();
-                    Nome.Text = Conta2.Titular.ToString();
-                    Saldo.Text = Conta2.Saldo.ToString() + " €";
-                    break;
-            }
-           */
-
-        }
 
         private void CarregarMultibanco_MouseEnter(object sender, EventArgs e)
         {
@@ -190,7 +137,15 @@ namespace TrabalhoContaBancaria
 
         private void CarregarMultibanco_Click(object sender, EventArgs e)
         {
+            Multibanco form = new Multibanco();
+            form.ReceberInformacoes(Conta.Email);
+            form.Show();
+        }
 
+        private void Atualizar_Tick(object sender, EventArgs e)
+        {
+            AtualizarOpcoes(Conta.Email);
+            AtualizarSaldo();
         }
     }
 }

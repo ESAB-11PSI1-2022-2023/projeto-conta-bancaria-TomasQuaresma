@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,6 +58,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Saldo = new System.Windows.Forms.Label();
             this.ReceberUtilizador = new System.Windows.Forms.Label();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CarregarMultibanco = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.button11 = new System.Windows.Forms.Button();
@@ -72,9 +76,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.button14 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.CarregarMultibanco = new System.Windows.Forms.Label();
+            this.Atualizar = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -82,6 +84,7 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -91,7 +94,6 @@
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
-            this.tableLayoutPanel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -559,6 +561,57 @@
             this.ReceberUtilizador.TabIndex = 12;
             this.ReceberUtilizador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel12.BackColor = System.Drawing.Color.Gainsboro;
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
+            this.tableLayoutPanel12.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel12.Controls.Add(this.CarregarMultibanco, 1, 1);
+            this.tableLayoutPanel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(157, 315);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 2;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(535, 73);
+            this.tableLayoutPanel12.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(503, 43);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Carregue o seu saldo PayPal instantaneamente com Multibanco e compre com a segura" +
+    "nça do PayPal em Portugal ou fora.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CarregarMultibanco
+            // 
+            this.CarregarMultibanco.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CarregarMultibanco.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CarregarMultibanco.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.CarregarMultibanco.Location = new System.Drawing.Point(29, 43);
+            this.CarregarMultibanco.Name = "CarregarMultibanco";
+            this.CarregarMultibanco.Size = new System.Drawing.Size(503, 30);
+            this.CarregarMultibanco.TabIndex = 1;
+            this.CarregarMultibanco.Text = "Adicionar dinheiro com Multibanco";
+            this.CarregarMultibanco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CarregarMultibanco.Click += new System.EventHandler(this.CarregarMultibanco_Click);
+            this.CarregarMultibanco.MouseEnter += new System.EventHandler(this.CarregarMultibanco_MouseEnter);
+            this.CarregarMultibanco.MouseLeave += new System.EventHandler(this.CarregarMultibanco_MouseLeave);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -835,56 +888,10 @@
             this.button14.Text = "Terminar Sessão";
             this.button14.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel12
+            // Atualizar
             // 
-            this.tableLayoutPanel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel12.BackColor = System.Drawing.Color.Gainsboro;
-            this.tableLayoutPanel12.ColumnCount = 2;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95F));
-            this.tableLayoutPanel12.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel12.Controls.Add(this.CarregarMultibanco, 1, 1);
-            this.tableLayoutPanel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(157, 315);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 2;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(535, 73);
-            this.tableLayoutPanel12.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(503, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Carregue o seu saldo PayPal instantaneamente com Multibanco e compre com a segura" +
-    "nça do PayPal em Portugal ou fora.";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // CarregarMultibanco
-            // 
-            this.CarregarMultibanco.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CarregarMultibanco.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CarregarMultibanco.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.CarregarMultibanco.Location = new System.Drawing.Point(29, 43);
-            this.CarregarMultibanco.Name = "CarregarMultibanco";
-            this.CarregarMultibanco.Size = new System.Drawing.Size(503, 30);
-            this.CarregarMultibanco.TabIndex = 1;
-            this.CarregarMultibanco.Text = "Adicionar dinheiro com Multibanco";
-            this.CarregarMultibanco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CarregarMultibanco.Click += new System.EventHandler(this.CarregarMultibanco_Click);
-            this.CarregarMultibanco.MouseEnter += new System.EventHandler(this.CarregarMultibanco_MouseEnter);
-            this.CarregarMultibanco.MouseLeave += new System.EventHandler(this.CarregarMultibanco_MouseLeave);
+            this.Atualizar.Enabled = true;
+            this.Atualizar.Tick += new System.EventHandler(this.Atualizar_Tick);
             // 
             // Inicio
             // 
@@ -905,6 +912,7 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
@@ -914,7 +922,6 @@
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
-            this.tableLayoutPanel12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -966,6 +973,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label CarregarMultibanco;
+        private System.Windows.Forms.Timer Atualizar;
     }
 }
 
