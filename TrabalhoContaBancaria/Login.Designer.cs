@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Mostrar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TextBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,7 +46,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Mail = new System.Windows.Forms.Label();
             this.AlterarMail = new System.Windows.Forms.Label();
-            this.Mostrar = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -183,6 +183,22 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(326, 58);
             this.tableLayoutPanel2.TabIndex = 5;
+            // 
+            // Mostrar
+            // 
+            this.Mostrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Mostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mostrar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.Mostrar.Location = new System.Drawing.Point(271, 23);
+            this.Mostrar.Name = "Mostrar";
+            this.Mostrar.Size = new System.Drawing.Size(52, 35);
+            this.Mostrar.TabIndex = 3;
+            this.Mostrar.Text = "Mostrar";
+            this.Mostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Mostrar.Visible = false;
+            this.Mostrar.Click += new System.EventHandler(this.Mostrar_Click);
             // 
             // label3
             // 
@@ -343,22 +359,6 @@
             this.AlterarMail.Click += new System.EventHandler(this.AlterarMail_Click);
             this.AlterarMail.MouseEnter += new System.EventHandler(this.AlterarMail_MouseEnter);
             this.AlterarMail.MouseLeave += new System.EventHandler(this.AlterarMail_MouseLeave);
-            // 
-            // Mostrar
-            // 
-            this.Mostrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Mostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mostrar.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.Mostrar.Location = new System.Drawing.Point(271, 23);
-            this.Mostrar.Name = "Mostrar";
-            this.Mostrar.Size = new System.Drawing.Size(52, 35);
-            this.Mostrar.TabIndex = 3;
-            this.Mostrar.Text = "Mostrar";
-            this.Mostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Mostrar.Visible = false;
-            this.Mostrar.Click += new System.EventHandler(this.Mostrar_Click);
             // 
             // Login
             // 
