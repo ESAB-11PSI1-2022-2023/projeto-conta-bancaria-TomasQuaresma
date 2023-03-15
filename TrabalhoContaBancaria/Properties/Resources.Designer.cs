@@ -63,6 +63,26 @@ namespace TrabalhoContaBancaria.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CaixaGeral {
+            get {
+                object obj = ResourceManager.GetObject("CaixaGeral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CartaoRevolut {
+            get {
+                object obj = ResourceManager.GetObject("CartaoRevolut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Definiçoes {
             get {
                 object obj = ResourceManager.GetObject("Definiçoes", resourceCulture);
