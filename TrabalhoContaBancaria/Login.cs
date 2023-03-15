@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright(c) Tomás Quaresma. All rights reserved.
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -117,8 +118,8 @@ namespace TrabalhoContaBancaria
                             string[] valores = linha.Split(':');
                             if (valores[0].Equals(Email) && valores[1].Equals(Password))
                             {
-                                //MessageBox.Show("Login realizado com sucesso!");
                                 Inicio form = new Inicio();
+                                form.ReceberInformacoes(Email);
                                 form.Show();
                                 this.Visible= false;
                                 return;

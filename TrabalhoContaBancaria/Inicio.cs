@@ -5,28 +5,57 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TrabalhoContaBancaria
 {
     public partial class Inicio : Form
     {
-        ContaBancaria Conta { get; set; }
-        ContaBancaria Conta0 = new ContaBancaria("AB0001-661", "Tintim",10000);
-        ContaBancaria Conta1 = new ContaBancaria("0658187233661", "Tintim", 10000);
-        ContaBancaria Conta2 = new ContaBancaria("UT0023-110", "Tintim", 10000);
+        ContaBancaria Conta = new ContaBancaria("Teste", "Teste",0);
         public Inicio()
         {
             InitializeComponent();
         }
-
+        public void ReceberInformacoes(string mail)
+        {
+            string[] linhas = File.ReadAllLines(@"Contas.txt");
+            foreach (string linha in linhas)
+            {
+                string[] valores = linha.Split(':');
+                if (valores[0].Equals(mail))
+                {
+                    string[] nome = valores[2].Split(' ');
+                    Conta = new ContaBancaria(valores[1], nome[0], Convert.ToDecimal(valores[3]));
+                    return;
+                }
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboBox1.SelectedIndex = 0;
+            
+            switch (DateTime.Now.Hour)
+            {
+                case int Dia when Dia >= 0 && Dia < 12:
+                    ReceberUtilizador.Text = "Bom dia " + Conta.Titular;
+                    break;
+                case int Tarde when Tarde >= 12 && Tarde < 18:
+                    ReceberUtilizador.Text = "Boa tarde " + Conta.Titular;
+                    break;
+                default:
+                    ReceberUtilizador.Text = "Boa noite " + Conta.Titular;
+                    break;
+            }
+
+            Saldo.Text = Conta.Saldo + " EUR";
+            
+
         }
+        
         /// <summary>
         /// Botão Fechar
         /// </summary>
@@ -40,6 +69,7 @@ namespace TrabalhoContaBancaria
         /// </summary>
         private void Levantamento_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 if (Convert.ToInt32(Quantia.Text) < 0)
@@ -65,6 +95,7 @@ namespace TrabalhoContaBancaria
 
             Quantia.Text = null;
             AtualizarOpcoes();
+            */
         }
 
         /// <summary>
@@ -72,6 +103,7 @@ namespace TrabalhoContaBancaria
         /// </summary>
         private void Deposito_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 if (Convert.ToInt32(Quantia.Text) < 0)
@@ -90,11 +122,12 @@ namespace TrabalhoContaBancaria
             
             Quantia.Text = null;
             AtualizarOpcoes();
+            */
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+           /* 
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
@@ -142,6 +175,21 @@ namespace TrabalhoContaBancaria
                     Saldo.Text = Conta2.Saldo.ToString() + " €";
                     break;
             }
+           */
+
+        }
+
+        private void CarregarMultibanco_MouseEnter(object sender, EventArgs e)
+        {
+            CarregarMultibanco.Font = new Font(CarregarMultibanco.Font, FontStyle.Underline);
+        }
+        private void CarregarMultibanco_MouseLeave(object sender, EventArgs e)
+        {
+            CarregarMultibanco.Font = new Font(CarregarMultibanco.Font, FontStyle.Regular);
+        }
+
+        private void CarregarMultibanco_Click(object sender, EventArgs e)
+        {
 
         }
     }
