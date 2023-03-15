@@ -68,7 +68,6 @@ namespace TrabalhoContaBancaria
                 Conta.Depositar(Convert.ToDecimal(textBox1.Text));
                 AtualizarOpcoes();
                 textBox1.Text = null; 
-                Inicio form = new Inicio();
                 this.Visible = false;
             }
             else

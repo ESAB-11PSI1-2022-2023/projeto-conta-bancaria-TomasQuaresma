@@ -11,3 +11,4 @@ C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoCont
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.Login.resources
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.Inicio.resources
 C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.Multibanco.resources
+C:\Users\tomas.DESKTOP-QBVOHS3\Desktop\GitHub\TrabalhoContaBancaria\TrabalhoContaBancaria\obj\Debug\TrabalhoContaBancaria.Depositos.resources

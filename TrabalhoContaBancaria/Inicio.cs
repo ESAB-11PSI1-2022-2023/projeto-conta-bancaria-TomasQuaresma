@@ -15,7 +15,7 @@ namespace TrabalhoContaBancaria
 {
     public partial class Inicio : Form
     {
-        ContaBancaria Conta = new ContaBancaria("Teste","Email", "Teste",0);
+        ContaBancaria Conta = new ContaBancaria("Teste","tomas@gmail.com", "Teste",10);
         public Inicio()
         {
             InitializeComponent();
@@ -157,7 +157,9 @@ namespace TrabalhoContaBancaria
 
         private void DepositoBancario_Click(object sender, EventArgs e)
         {
-
+            Depositos form = new Depositos();
+            form.ReceberInformacoes(Conta.Email);
+            form.Show();
         }
     }
 }

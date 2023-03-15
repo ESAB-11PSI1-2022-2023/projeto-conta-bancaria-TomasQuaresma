@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContaBancaria.cs" />
+    <Compile Include="Depositos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Depositos.Designer.cs">
+      <DependentUpon>Depositos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Depositos.resx">
+      <DependentUpon>Depositos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CartaoRevolut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xoom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
