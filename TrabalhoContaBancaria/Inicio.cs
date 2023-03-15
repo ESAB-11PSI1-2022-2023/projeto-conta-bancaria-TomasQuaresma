@@ -147,5 +147,12 @@ namespace TrabalhoContaBancaria
             AtualizarOpcoes(Conta.Email);
             AtualizarSaldo();
         }
+
+        private void TerminarSessao_Click(object sender, EventArgs e)
+        {
+            this.Visible= false;
+            Login login= new Login();
+            login.Visible = true;
+        }
     }
 }

@@ -121,7 +121,16 @@ namespace TrabalhoContaBancaria
                                 Inicio form = new Inicio();
                                 form.AtualizarOpcoes(Email);
                                 form.Show();
-                                this.Visible= false;
+                                this.Visible = false;
+
+                                Mail.Text = null;
+                                AlterarMail.Visible = false;
+                                Mostrar.Visible = false;
+                                TextBox1.Text = null;
+                                TextBox1.PasswordChar = '\0';
+                                Botao1.Text = "Seguinte";
+                                label3.Text = "Endereço de e-mail ou número de telemóvel";
+
                                 return;
                             }
                         }
