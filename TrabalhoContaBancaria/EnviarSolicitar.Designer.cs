@@ -63,7 +63,6 @@
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.EmailDestino = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
@@ -74,6 +73,7 @@
             this.Continuar = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
+            this.ListaContactos = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -480,7 +480,7 @@
             this.MenuEnviar.FlatAppearance.BorderSize = 0;
             this.MenuEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MenuEnviar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F);
-            this.MenuEnviar.ForeColor = System.Drawing.Color.SlateGray;
+            this.MenuEnviar.ForeColor = System.Drawing.Color.MidnightBlue;
             this.MenuEnviar.Location = new System.Drawing.Point(3, 27);
             this.MenuEnviar.Name = "MenuEnviar";
             this.MenuEnviar.Size = new System.Drawing.Size(125, 42);
@@ -518,7 +518,7 @@
             this.MenuSolicitar.FlatAppearance.BorderSize = 0;
             this.MenuSolicitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MenuSolicitar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuSolicitar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.MenuSolicitar.ForeColor = System.Drawing.Color.Black;
             this.MenuSolicitar.Location = new System.Drawing.Point(3, 27);
             this.MenuSolicitar.Name = "MenuSolicitar";
             this.MenuSolicitar.Size = new System.Drawing.Size(149, 42);
@@ -635,17 +635,18 @@
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.ColumnCount = 4;
+            this.tableLayoutPanel6.ColumnCount = 5;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel6.Controls.Add(this.Titulo1, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel1, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label2, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel20, 1, 3);
             this.tableLayoutPanel6.Controls.Add(this.flowLayoutPanel1, 3, 2);
             this.tableLayoutPanel6.Controls.Add(this.label4, 1, 2);
+            this.tableLayoutPanel6.Controls.Add(this.ListaContactos, 3, 1);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 210);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 9;
@@ -658,8 +659,6 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1285, 551);
             this.tableLayoutPanel6.TabIndex = 9;
             // 
@@ -757,20 +756,6 @@
             this.EmailDestino.Size = new System.Drawing.Size(344, 25);
             this.EmailDestino.TabIndex = 14;
             this.EmailDestino.Click += new System.EventHandler(this.EmailDestino_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(902, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(380, 82);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Mais formas de enviar dinheiro";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel20
             // 
@@ -929,7 +914,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(902, 167);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(773, 167);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
             this.flowLayoutPanel1.TabIndex = 18;
@@ -948,6 +933,20 @@
             this.label4.Text = "EUR";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Visible = false;
+            // 
+            // ListaContactos
+            // 
+            this.ListaContactos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ListaContactos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaContactos.FormattingEnabled = true;
+            this.ListaContactos.ItemHeight = 22;
+            this.ListaContactos.Location = new System.Drawing.Point(773, 85);
+            this.ListaContactos.Name = "ListaContactos";
+            this.ListaContactos.Size = new System.Drawing.Size(379, 70);
+            this.ListaContactos.TabIndex = 21;
+            this.ListaContactos.Visible = false;
             // 
             // EnviarSolicitar
             // 
@@ -1030,7 +1029,6 @@
         private System.Windows.Forms.TextBox EmailDestino;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
         private System.Windows.Forms.Button ValidarEmail;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
@@ -1039,5 +1037,6 @@
         private System.Windows.Forms.Button Continuar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox ListaContactos;
     }
 }

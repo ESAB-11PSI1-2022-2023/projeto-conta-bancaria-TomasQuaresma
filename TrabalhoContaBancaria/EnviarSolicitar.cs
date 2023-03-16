@@ -54,6 +54,16 @@ namespace TrabalhoContaBancaria
         public void Enviar()
         {
             Titulo1.Text = "Enviar dinheiro";
+
+            MenuEnviar.ForeColor = Color.MidnightBlue;
+            MenuEnviar.BackColor = Color.LightSteelBlue;
+
+            MenuSolicitar.ForeColor = Color.Black;
+            MenuSolicitar.BackColor = Color.White;
+
+            MenuContactos.ForeColor = Color.Black;
+            MenuContactos.BackColor = Color.White;
+
             Continuar.Visible = false;
             Cancelar.Visible = false;
             label3.Visible = false;
@@ -69,10 +79,86 @@ namespace TrabalhoContaBancaria
         public void Solicitar()
         {
             Titulo1.Text = "Solicitar dinheiro";
+
+            MenuEnviar.ForeColor = Color.Black;
+            MenuEnviar.BackColor = Color.White;
+
+            MenuSolicitar.ForeColor = Color.MidnightBlue;
+            MenuSolicitar.BackColor = Color.LightSteelBlue;
+
+            MenuContactos.ForeColor = Color.Black;
+            MenuContactos.BackColor = Color.White;
+
+            Continuar.Visible = false;
+            Cancelar.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            tableLayoutPanel3.Visible = true;
+            tableLayoutPanel18.Visible = true;
+            ValidarEmail.Visible = true;
+            Titulo1.TextAlign = ContentAlignment.MiddleLeft;
+            EmailDestino.TextAlign = HorizontalAlignment.Left;
+            EmailDestino.Text = null;
         }
         public void Contactos()
         {
+            if (MenuContactos.ForeColor != Color.MidnightBlue)
+            {
+                string mail = Conta.Email;
 
+                ListaContactos.Visible = true;
+
+                MenuContactos.ForeColor = Color.MidnightBlue;
+                MenuContactos.BackColor = Color.LightSteelBlue;
+
+                Continuar.Visible = false;
+                Cancelar.Visible = false;
+                label3.Visible = false;
+                label4.Visible = false;
+                panel1.BorderStyle = BorderStyle.FixedSingle;
+                tableLayoutPanel3.Visible = true;
+                tableLayoutPanel18.Visible = true;
+                ValidarEmail.Visible = true;
+                Titulo1.TextAlign = ContentAlignment.MiddleLeft;
+                EmailDestino.TextAlign = HorizontalAlignment.Left;
+                EmailDestino.Text = null;
+
+                // Cria uma lista vazia
+                List<string> lista = new List<string>();
+
+                // Abre o arquivo para leitura
+                using (StreamReader sr = new StreamReader(@"Contactos.txt"))
+                {
+                    // Lê cada linha do arquivo
+                    string linha;
+                    while ((linha = sr.ReadLine()) != null)
+                    {
+                        // Separa o e-mail e os elementos associados
+                        string[] partes = linha.Split(':');
+                        string email = partes[0];
+
+                        // Adiciona cada elemento na lista de elementos
+                        List<string> elementos = new List<string>();
+                        for (int i = 1; i < partes.Length; i++)
+                        {
+                            AtualizarOpcoes(partes[i]);
+                            lista.Add(Conta.Titular+"-"+ partes[i]);
+                        }
+                    }
+                }
+
+                // Exibe a lista na interface gráfica
+                ListaContactos.DataSource = lista;
+
+                AtualizarOpcoes(mail);
+            }
+            else
+            {
+                ListaContactos.Visible = false;
+                MenuContactos.ForeColor = Color.Black;
+                MenuContactos.BackColor = Color.White;
+            }
         }
 
         private void MenuEnviar_Click(object sender, EventArgs e)
@@ -99,6 +185,7 @@ namespace TrabalhoContaBancaria
             
                 try
                 {
+                
                     string[] linhas = File.ReadAllLines(@"Contas.txt");
                     foreach (string linha in linhas)
                     {
