@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,10 +54,54 @@ namespace TrabalhoContaBancaria
         ///para uma instância da classe ContaBancaria(parâmetro contaDestino) e retorna o saldo da
         ///conta de origem após a operação
         /// </summary>
-        public void Transferir(ContaBancaria contaDestino, decimal quantia)
+        public void Transferir(string conta,string contaDestino, decimal quantia)
         {
             Saldo -= quantia;
-            contaDestino.Saldo += quantia;
+            //contaDestino.Saldo += quantia;
+
+            List<string> linhasAtualizadas = new List<string>();
+            // Ler o conteúdo do arquivo em uma variável
+            string conteudo = File.ReadAllText(@"Contas.txt");
+
+            // Dividir o conteúdo em linhas separadas
+            string[] linhas = conteudo.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
+            // Loop pelas linhas do arquivo
+            foreach (string linha in linhas)
+            {
+                // Dividir cada linha em suas partes
+                string[] partes = linha.Split(':');
+
+                // Verificar se o e-mail corresponde ao e-mail alvo
+                if (partes[0] == conta || partes[0] == contaDestino)
+                {
+                    // Atualizar o saldo na linha
+                    if (partes[0] == conta){
+                        partes[3] = Convert.ToString(Saldo);
+                    }
+                    else if (partes[0] == contaDestino)
+                    {
+                        partes[3] = Convert.ToString(Convert.ToDecimal(partes[3])+quantia);
+                    }
+                    
+
+                    // Armazenar a linha atualizada em uma nova variável
+                    string linhaAtualizada = string.Join(":", partes);
+
+                    // Adicionar a linha atualizada à lista de linhas atualizadas
+                    linhasAtualizadas.Add(linhaAtualizada);
+                }
+                else
+                {
+                    // Armazenar a linha original em uma nova variável
+                    linhasAtualizadas.Add(linha);
+                }
+
+                
+            }
+
+            // Escrever as linhas atualizadas de volta no arquivo de bloco de notas
+            File.WriteAllText(@"Contas.txt", string.Join(Environment.NewLine, linhasAtualizadas));
         }
     }
 }

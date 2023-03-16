@@ -16,7 +16,7 @@ namespace TrabalhoContaBancaria
 {
     public partial class Inicio : Form
     {
-        ContaBancaria Conta = new ContaBancaria("Teste","tomas@gmail.com", "Teste",10);
+        ContaBancaria Conta = new ContaBancaria("12345","tomasgquaresma@gmail.com", "Tomás", 10000);
         public Inicio()
         {
             InitializeComponent();

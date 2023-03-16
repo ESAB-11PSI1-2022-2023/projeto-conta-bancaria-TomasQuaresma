@@ -17,7 +17,7 @@ namespace TrabalhoContaBancaria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EnviarSolicitar());
+            Application.Run(new Login());
         }
     }
 }

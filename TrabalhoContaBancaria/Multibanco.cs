@@ -61,18 +61,25 @@ namespace TrabalhoContaBancaria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
 
-            if (Convert.ToDecimal(textBox1.Text) >=10)
-            {
-                Conta.Depositar(Convert.ToDecimal(textBox1.Text));
-                AtualizarOpcoes();
-                textBox1.Text = null; 
-                this.Visible = false;
+
+                if (Convert.ToDecimal(textBox1.Text) >= 10)
+                {
+                    Conta.Depositar(Convert.ToDecimal(textBox1.Text));
+                    AtualizarOpcoes();
+                    textBox1.Text = null;
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, insira um número válido maior que 10.");
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("Por favor, insira um número válido maior que 10.");
+                MessageBox.Show("Os caracteres introduzidos não são validos");
             }
         }
 

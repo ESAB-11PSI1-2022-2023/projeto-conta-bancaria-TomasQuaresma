@@ -42,6 +42,7 @@ namespace TrabalhoContaBancaria
 
         private void Aplicar_Click(object sender, EventArgs e)
         {
+            try { 
             if (Convert.ToDecimal(textBox1.Text) >= 10 && Conta.Saldo - Convert.ToDecimal(textBox1.Text)>=0)
             {
                 Conta.Levantar(Convert.ToDecimal(textBox1.Text));
@@ -54,6 +55,11 @@ namespace TrabalhoContaBancaria
                 MessageBox.Show("Não foi possivel realizar a operação");
             }
         }
+            catch
+            {
+                MessageBox.Show("Os caracteres introduzidos não são validos");
+            }
+}
 
         public void AtualizarOpcoes()
         {
