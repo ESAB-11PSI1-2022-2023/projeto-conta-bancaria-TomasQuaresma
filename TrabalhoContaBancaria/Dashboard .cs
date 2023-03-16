@@ -65,68 +65,6 @@ namespace TrabalhoContaBancaria
             AtualizarSaldo();
         }
 
-        /// <summary>
-        /// Botão Levantamento, retira a quantidade de saldo escolhida pelo utilizador
-        /// </summary>
-        private void Levantamento_Click(object sender, EventArgs e)
-        {
-            /*
-            try
-            {
-                if (Convert.ToInt32(Quantia.Text) < 0)
-                {
-                    MessageBox.Show("Introduza um valor numérico valido.","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    Quantia.Text = null;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Introduza um valor numérico valido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Quantia.Text = null;
-            }
-
-            if (Convert.ToDecimal(Quantia.Text) <= Conta.Saldo)
-            {
-                Conta.Saldo -=Convert.ToDecimal(Quantia.Text);
-            }
-            else
-            {
-                MessageBox.Show("Não tem saldo suficiente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            Quantia.Text = null;
-            AtualizarOpcoes();
-            */
-        }
-
-        /// <summary>
-        /// Botão Deposito, adiciona a quantidade de saldo escolhida pelo utilizador
-        /// </summary>
-        private void Deposito_Click(object sender, EventArgs e)
-        {
-            /*
-            try
-            {
-                if (Convert.ToInt32(Quantia.Text) < 0)
-                {
-                    MessageBox.Show("Introduza um valor numérico valido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Quantia.Text = null;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Introduza um valor numérico valido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Quantia.Text = null;
-            }
-
-            Conta.Saldo += Convert.ToDecimal(Quantia.Text);
-            
-            Quantia.Text = null;
-            AtualizarOpcoes();
-            */
-        }
-
-
         private void CarregarMultibanco_MouseEnter(object sender, EventArgs e)
         {
             CarregarMultibanco.Font = new Font(CarregarMultibanco.Font, FontStyle.Underline);
@@ -164,6 +102,14 @@ namespace TrabalhoContaBancaria
         }
 
         private void EnviarSolicitar_Click(object sender, EventArgs e)
+        {
+            EnviarSolicitar form = new EnviarSolicitar();
+            form.AtualizarOpcoes(Conta.Email);
+            form.Show();
+            this.Visible = false;
+        }
+
+        private void Enviar_Click(object sender, EventArgs e)
         {
             EnviarSolicitar form = new EnviarSolicitar();
             form.AtualizarOpcoes(Conta.Email);

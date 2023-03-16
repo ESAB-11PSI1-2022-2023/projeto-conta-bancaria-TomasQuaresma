@@ -36,7 +36,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Dashboard = new System.Windows.Forms.Button();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,11 +45,11 @@
             this.TerminarSessao = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.MenuContactos = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.MenuEnviar = new System.Windows.Forms.Button();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.MenuSolicitar = new System.Windows.Forms.Button();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,7 +57,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.ApagarTextBox = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Titulo1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
@@ -69,7 +69,7 @@
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.ValidarEmail = new System.Windows.Forms.Button();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.Cancelar = new System.Windows.Forms.Button();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
             this.Continuar = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -246,7 +246,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Controls.Add(this.button3, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.Dashboard, 0, 1);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(131, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
@@ -257,22 +257,23 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(155, 96);
             this.tableLayoutPanel8.TabIndex = 11;
             // 
-            // button3
+            // Dashboard
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Dashboard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.DarkBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(3, 27);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 42);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Dashboard";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Dashboard.BackColor = System.Drawing.Color.DarkBlue;
+            this.Dashboard.FlatAppearance.BorderSize = 0;
+            this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dashboard.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F);
+            this.Dashboard.ForeColor = System.Drawing.Color.White;
+            this.Dashboard.Location = new System.Drawing.Point(3, 27);
+            this.Dashboard.Name = "Dashboard";
+            this.Dashboard.Size = new System.Drawing.Size(125, 42);
+            this.Dashboard.TabIndex = 7;
+            this.Dashboard.Text = "Dashboard";
+            this.Dashboard.UseVisualStyleBackColor = false;
+            this.Dashboard.Click += new System.EventHandler(this.Dashboard_Click);
             // 
             // tableLayoutPanel9
             // 
@@ -380,6 +381,7 @@
             this.TerminarSessao.TabIndex = 7;
             this.TerminarSessao.Text = "Terminar Sessão";
             this.TerminarSessao.UseVisualStyleBackColor = true;
+            this.TerminarSessao.Click += new System.EventHandler(this.TerminarSessao_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -420,7 +422,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel4.Controls.Add(this.button2, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.MenuContactos, 1, 1);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(453, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
@@ -431,22 +433,23 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(155, 96);
             this.tableLayoutPanel4.TabIndex = 12;
             // 
-            // button2
+            // MenuContactos
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MenuContactos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(26, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 42);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Contactos";
-            this.button2.UseVisualStyleBackColor = false;
+            this.MenuContactos.BackColor = System.Drawing.Color.White;
+            this.MenuContactos.FlatAppearance.BorderSize = 0;
+            this.MenuContactos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuContactos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F);
+            this.MenuContactos.ForeColor = System.Drawing.Color.Black;
+            this.MenuContactos.Location = new System.Drawing.Point(26, 27);
+            this.MenuContactos.Name = "MenuContactos";
+            this.MenuContactos.Size = new System.Drawing.Size(102, 42);
+            this.MenuContactos.TabIndex = 7;
+            this.MenuContactos.Text = "Contactos";
+            this.MenuContactos.UseVisualStyleBackColor = false;
+            this.MenuContactos.Click += new System.EventHandler(this.MenuContactos_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -457,7 +460,7 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.button5, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.MenuEnviar, 0, 1);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(131, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
@@ -468,22 +471,23 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(155, 96);
             this.tableLayoutPanel7.TabIndex = 11;
             // 
-            // button5
+            // MenuEnviar
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MenuEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F);
-            this.button5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button5.Location = new System.Drawing.Point(3, 27);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 42);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Enviar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.MenuEnviar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.MenuEnviar.FlatAppearance.BorderSize = 0;
+            this.MenuEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuEnviar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F);
+            this.MenuEnviar.ForeColor = System.Drawing.Color.SlateGray;
+            this.MenuEnviar.Location = new System.Drawing.Point(3, 27);
+            this.MenuEnviar.Name = "MenuEnviar";
+            this.MenuEnviar.Size = new System.Drawing.Size(125, 42);
+            this.MenuEnviar.TabIndex = 7;
+            this.MenuEnviar.Text = "Enviar";
+            this.MenuEnviar.UseVisualStyleBackColor = false;
+            this.MenuEnviar.Click += new System.EventHandler(this.MenuEnviar_Click);
             // 
             // tableLayoutPanel12
             // 
@@ -494,7 +498,7 @@
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel12.Controls.Add(this.button6, 0, 1);
+            this.tableLayoutPanel12.Controls.Add(this.MenuSolicitar, 0, 1);
             this.tableLayoutPanel12.Location = new System.Drawing.Point(292, 3);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 3;
@@ -505,22 +509,23 @@
             this.tableLayoutPanel12.Size = new System.Drawing.Size(155, 96);
             this.tableLayoutPanel12.TabIndex = 12;
             // 
-            // button6
+            // MenuSolicitar
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MenuSolicitar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(3, 27);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(149, 42);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Solicitar";
-            this.button6.UseVisualStyleBackColor = false;
+            this.MenuSolicitar.BackColor = System.Drawing.Color.White;
+            this.MenuSolicitar.FlatAppearance.BorderSize = 0;
+            this.MenuSolicitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuSolicitar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuSolicitar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.MenuSolicitar.Location = new System.Drawing.Point(3, 27);
+            this.MenuSolicitar.Name = "MenuSolicitar";
+            this.MenuSolicitar.Size = new System.Drawing.Size(149, 42);
+            this.MenuSolicitar.TabIndex = 7;
+            this.MenuSolicitar.Text = "Solicitar";
+            this.MenuSolicitar.UseVisualStyleBackColor = false;
+            this.MenuSolicitar.Click += new System.EventHandler(this.MenuSolicitar_Click);
             // 
             // tableLayoutPanel15
             // 
@@ -635,7 +640,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel6.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.Titulo1, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.label2, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel20, 1, 3);
@@ -658,19 +663,19 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1285, 551);
             this.tableLayoutPanel6.TabIndex = 9;
             // 
-            // label1
+            // Titulo1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Titulo1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(131, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(508, 82);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Enviar dinheiro";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Titulo1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulo1.ForeColor = System.Drawing.Color.Black;
+            this.Titulo1.Location = new System.Drawing.Point(131, 0);
+            this.Titulo1.Name = "Titulo1";
+            this.Titulo1.Size = new System.Drawing.Size(508, 82);
+            this.Titulo1.TabIndex = 13;
+            this.Titulo1.Text = "Enviar dinheiro";
+            this.Titulo1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
@@ -854,7 +859,7 @@
             this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel22.Controls.Add(this.button10, 1, 1);
+            this.tableLayoutPanel22.Controls.Add(this.Cancelar, 1, 1);
             this.tableLayoutPanel22.Location = new System.Drawing.Point(3, 141);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 3;
@@ -864,24 +869,24 @@
             this.tableLayoutPanel22.Size = new System.Drawing.Size(502, 42);
             this.tableLayoutPanel22.TabIndex = 17;
             // 
-            // button10
+            // Cancelar
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button10.BackColor = System.Drawing.Color.Navy;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(153, 5);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(194, 31);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "Cancelar";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Visible = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.Cancelar.BackColor = System.Drawing.Color.Navy;
+            this.Cancelar.FlatAppearance.BorderSize = 0;
+            this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancelar.ForeColor = System.Drawing.Color.White;
+            this.Cancelar.Location = new System.Drawing.Point(153, 5);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(194, 31);
+            this.Cancelar.TabIndex = 7;
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.UseVisualStyleBackColor = false;
+            this.Cancelar.Visible = false;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // tableLayoutPanel21
             // 
@@ -996,7 +1001,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Dashboard;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
@@ -1006,17 +1011,17 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button MenuContactos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button MenuEnviar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button MenuSolicitar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Titulo1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.Button ApagarTextBox;
@@ -1029,7 +1034,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button Cancelar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
         private System.Windows.Forms.Button Continuar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

@@ -103,5 +103,44 @@ namespace TrabalhoContaBancaria
             // Escrever as linhas atualizadas de volta no arquivo de bloco de notas
             File.WriteAllText(@"Contas.txt", string.Join(Environment.NewLine, linhasAtualizadas));
         }
+
+        public void Solicitar(string conta,string contaDestino,decimal quantia)
+        {
+            List<string> linhasAtualizadas = new List<string>();
+            // Ler o conteúdo do arquivo em uma variável
+            string conteudo = File.ReadAllText(@"Solicitacoes.txt");
+
+            // Dividir o conteúdo em linhas separadas
+            string[] linhas = conteudo.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
+            // Loop pelas linhas do arquivo
+            foreach (string linha in linhas)
+            {
+                // Dividir cada linha em suas partes
+                string[] partes = linha.Split(':');
+
+                // Verificar se o e-mail corresponde ao e-mail alvo
+                if (partes[0] == contaDestino)
+                {
+                        partes[0] = partes[0] + ":" + conta +","+quantia;
+
+                    // Armazenar a linha atualizada em uma nova variável
+                    string linhaAtualizada = string.Join(":", partes);
+
+                    // Adicionar a linha atualizada à lista de linhas atualizadas
+                    linhasAtualizadas.Add(linhaAtualizada);
+                }
+                else
+                {
+                    // Armazenar a linha original em uma nova variável
+                    linhasAtualizadas.Add(linha);
+                }
+
+
+            }
+
+            // Escrever as linhas atualizadas de volta no arquivo de bloco de notas
+            File.WriteAllText(@"Solicitacoes.txt", string.Join(Environment.NewLine, linhasAtualizadas));
+        }
     }
 }
