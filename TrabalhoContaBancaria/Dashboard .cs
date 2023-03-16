@@ -63,6 +63,57 @@ namespace TrabalhoContaBancaria
             }
 
             AtualizarSaldo();
+
+            // Cria uma lista vazia
+            List<string> lista = new List<string>();
+
+            // Abre o arquivo para leitura
+            using (StreamReader sr = new StreamReader(@"Contactos.txt"))
+            {
+                // Lê cada linha do arquivo
+                string linha;
+                while ((linha = sr.ReadLine()) != null)
+                {
+                    // Separa o e-mail e os elementos associados
+                    string[] partes = linha.Split(':');
+                    string email = partes[0];
+                    try
+                    {
+                        string mail = Conta.Email;
+                        AtualizarOpcoes(partes[1]);
+                        Contato1.Text = Conta.Titular;
+                        AtualizarOpcoes(partes[2]);
+                        Contato2.Text = Conta.Titular;
+                        AtualizarOpcoes(partes[3]);
+                        Contato3.Text = Conta.Titular;
+                        AtualizarOpcoes(partes[4]);
+                        Contato4.Text = Conta.Titular;
+                        
+                    }
+                    catch
+                    {
+
+                    }
+
+                    if(Contato1.Text == "")
+                    {
+                        IContato1.Visible= false;   
+                    }
+                    if (Contato2.Text == "")
+                    {
+                        IContato2.Visible = false;
+                    }
+                    if (Contato3.Text == "")
+                    {
+                        IContato3.Visible = false;
+                    }
+                    if (Contato4.Text == "")
+                    {
+                        IContato4.Visible = false;
+                    }
+                }
+            }
+            
         }
 
         private void CarregarMultibanco_MouseEnter(object sender, EventArgs e)
@@ -113,6 +164,15 @@ namespace TrabalhoContaBancaria
         {
             EnviarSolicitar form = new EnviarSolicitar();
             form.AtualizarOpcoes(Conta.Email);
+            form.Show();
+            this.Visible = false;
+        }
+
+        private void Solicitar_Click(object sender, EventArgs e)
+        {
+            EnviarSolicitar form = new EnviarSolicitar();
+            form.AtualizarOpcoes(Conta.Email);
+            form.Solicitar();
             form.Show();
             this.Visible = false;
         }
