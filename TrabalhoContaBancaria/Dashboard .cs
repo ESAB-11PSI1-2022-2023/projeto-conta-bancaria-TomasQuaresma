@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TrabalhoContaBancaria
 {
@@ -160,6 +161,14 @@ namespace TrabalhoContaBancaria
             Depositos form = new Depositos();
             form.ReceberInformacoes(Conta.Email);
             form.Show();
+        }
+
+        private void EnviarSolicitar_Click(object sender, EventArgs e)
+        {
+            EnviarSolicitar form = new EnviarSolicitar();
+            form.AtualizarOpcoes(Conta.Email);
+            form.Show();
+            this.Visible = false;
         }
     }
 }
