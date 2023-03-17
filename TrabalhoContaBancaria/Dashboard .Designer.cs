@@ -31,19 +31,32 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
+            this.ISolicitar1 = new System.Windows.Forms.Button();
+            this.Solicitar1 = new System.Windows.Forms.Label();
+            this.ISolicitar2 = new System.Windows.Forms.Button();
+            this.Solicitar2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.DepositoBancario = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.Mais = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.Solicitar = new System.Windows.Forms.Button();
             this.Enviar = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.IContato3 = new System.Windows.Forms.Button();
+            this.IContato1 = new System.Windows.Forms.Button();
             this.Contato1 = new System.Windows.Forms.Label();
             this.Contato3 = new System.Windows.Forms.Label();
             this.Contato2 = new System.Windows.Forms.Label();
             this.Contato4 = new System.Windows.Forms.Label();
+            this.IContato2 = new System.Windows.Forms.Button();
+            this.IContato4 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,7 +64,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.button15 = new System.Windows.Forms.Button();
@@ -68,32 +83,29 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.EnviarSolicitar = new System.Windows.Forms.Button();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.button13 = new System.Windows.Forms.Button();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.TerminarSessao = new System.Windows.Forms.Button();
             this.Atualizar = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.DepositoBancario = new System.Windows.Forms.Button();
-            this.Mais = new System.Windows.Forms.Button();
-            this.IContato3 = new System.Windows.Forms.Button();
-            this.IContato1 = new System.Windows.Forms.Button();
-            this.IContato2 = new System.Windows.Forms.Button();
-            this.IContato4 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel20.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel21.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
@@ -101,13 +113,11 @@
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -119,6 +129,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel20, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel15, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-4, 100);
@@ -128,6 +139,118 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1300, 663);
             this.tableLayoutPanel1.TabIndex = 5;
+            // 
+            // tableLayoutPanel20
+            // 
+            this.tableLayoutPanel20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel20.ColumnCount = 3;
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel20.Controls.Add(this.panel1, 1, 1);
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 400);
+            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
+            this.tableLayoutPanel20.RowCount = 3;
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(774, 260);
+            this.tableLayoutPanel20.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.tableLayoutPanel21);
+            this.panel1.Location = new System.Drawing.Point(157, 55);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(535, 150);
+            this.panel1.TabIndex = 14;
+            // 
+            // tableLayoutPanel21
+            // 
+            this.tableLayoutPanel21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel21.ColumnCount = 2;
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel21.Controls.Add(this.ISolicitar1, 0, 0);
+            this.tableLayoutPanel21.Controls.Add(this.Solicitar1, 1, 0);
+            this.tableLayoutPanel21.Controls.Add(this.ISolicitar2, 0, 1);
+            this.tableLayoutPanel21.Controls.Add(this.Solicitar2, 1, 1);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
+            this.tableLayoutPanel21.RowCount = 2;
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(529, 144);
+            this.tableLayoutPanel21.TabIndex = 13;
+            // 
+            // ISolicitar1
+            // 
+            this.ISolicitar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ISolicitar1.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.User;
+            this.ISolicitar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ISolicitar1.FlatAppearance.BorderSize = 0;
+            this.ISolicitar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ISolicitar1.ForeColor = System.Drawing.Color.Transparent;
+            this.ISolicitar1.Location = new System.Drawing.Point(3, 3);
+            this.ISolicitar1.Name = "ISolicitar1";
+            this.ISolicitar1.Size = new System.Drawing.Size(99, 66);
+            this.ISolicitar1.TabIndex = 1;
+            this.ISolicitar1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ISolicitar1.UseVisualStyleBackColor = true;
+            this.ISolicitar1.Click += new System.EventHandler(this.ISolicitar1_Click);
+            // 
+            // Solicitar1
+            // 
+            this.Solicitar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Solicitar1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Solicitar1.ForeColor = System.Drawing.Color.Black;
+            this.Solicitar1.Location = new System.Drawing.Point(108, 0);
+            this.Solicitar1.Name = "Solicitar1";
+            this.Solicitar1.Size = new System.Drawing.Size(418, 72);
+            this.Solicitar1.TabIndex = 6;
+            this.Solicitar1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ISolicitar2
+            // 
+            this.ISolicitar2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ISolicitar2.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.User;
+            this.ISolicitar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ISolicitar2.FlatAppearance.BorderSize = 0;
+            this.ISolicitar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ISolicitar2.ForeColor = System.Drawing.Color.Transparent;
+            this.ISolicitar2.Location = new System.Drawing.Point(3, 75);
+            this.ISolicitar2.Name = "ISolicitar2";
+            this.ISolicitar2.Size = new System.Drawing.Size(99, 66);
+            this.ISolicitar2.TabIndex = 2;
+            this.ISolicitar2.UseVisualStyleBackColor = true;
+            this.ISolicitar2.Click += new System.EventHandler(this.ISolicitar2_Click);
+            // 
+            // Solicitar2
+            // 
+            this.Solicitar2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Solicitar2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Solicitar2.ForeColor = System.Drawing.Color.Black;
+            this.Solicitar2.Location = new System.Drawing.Point(108, 72);
+            this.Solicitar2.Name = "Solicitar2";
+            this.Solicitar2.Size = new System.Drawing.Size(418, 72);
+            this.Solicitar2.TabIndex = 7;
+            this.Solicitar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel3
             // 
@@ -189,6 +312,22 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(507, 140);
             this.tableLayoutPanel7.TabIndex = 5;
             // 
+            // DepositoBancario
+            // 
+            this.DepositoBancario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DepositoBancario.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.DepositoBancario;
+            this.DepositoBancario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.DepositoBancario.FlatAppearance.BorderSize = 0;
+            this.DepositoBancario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DepositoBancario.Location = new System.Drawing.Point(33, 3);
+            this.DepositoBancario.Name = "DepositoBancario";
+            this.DepositoBancario.Size = new System.Drawing.Size(82, 78);
+            this.DepositoBancario.TabIndex = 0;
+            this.DepositoBancario.UseVisualStyleBackColor = true;
+            this.DepositoBancario.Click += new System.EventHandler(this.DepositoBancario_Click);
+            // 
             // label15
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -216,6 +355,21 @@
             this.label18.TabIndex = 8;
             this.label18.Text = "Mais";
             this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Mais
+            // 
+            this.Mais.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Mais.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.Mais;
+            this.Mais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Mais.FlatAppearance.BorderSize = 0;
+            this.Mais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mais.Location = new System.Drawing.Point(387, 3);
+            this.Mais.Name = "Mais";
+            this.Mais.Size = new System.Drawing.Size(82, 78);
+            this.Mais.TabIndex = 10;
+            this.Mais.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -322,6 +476,36 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(507, 140);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
+            // IContato3
+            // 
+            this.IContato3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IContato3.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.User;
+            this.IContato3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IContato3.FlatAppearance.BorderSize = 0;
+            this.IContato3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IContato3.Location = new System.Drawing.Point(269, 3);
+            this.IContato3.Name = "IContato3";
+            this.IContato3.Size = new System.Drawing.Size(82, 78);
+            this.IContato3.TabIndex = 4;
+            this.IContato3.UseVisualStyleBackColor = true;
+            // 
+            // IContato1
+            // 
+            this.IContato1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IContato1.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.User;
+            this.IContato1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IContato1.FlatAppearance.BorderSize = 0;
+            this.IContato1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IContato1.Location = new System.Drawing.Point(33, 3);
+            this.IContato1.Name = "IContato1";
+            this.IContato1.Size = new System.Drawing.Size(82, 78);
+            this.IContato1.TabIndex = 0;
+            this.IContato1.UseVisualStyleBackColor = true;
+            // 
             // Contato1
             // 
             this.Contato1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -373,6 +557,36 @@
             this.Contato4.Size = new System.Drawing.Size(82, 56);
             this.Contato4.TabIndex = 8;
             this.Contato4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // IContato2
+            // 
+            this.IContato2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IContato2.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.User;
+            this.IContato2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IContato2.FlatAppearance.BorderSize = 0;
+            this.IContato2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IContato2.Location = new System.Drawing.Point(151, 3);
+            this.IContato2.Name = "IContato2";
+            this.IContato2.Size = new System.Drawing.Size(82, 78);
+            this.IContato2.TabIndex = 9;
+            this.IContato2.UseVisualStyleBackColor = true;
+            // 
+            // IContato4
+            // 
+            this.IContato4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IContato4.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.User;
+            this.IContato4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IContato4.FlatAppearance.BorderSize = 0;
+            this.IContato4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IContato4.Location = new System.Drawing.Point(387, 3);
+            this.IContato4.Name = "IContato4";
+            this.IContato4.Size = new System.Drawing.Size(82, 78);
+            this.IContato4.TabIndex = 10;
+            this.IContato4.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -488,6 +702,19 @@
             this.tableLayoutPanel18.Size = new System.Drawing.Size(120, 64);
             this.tableLayoutPanel18.TabIndex = 15;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.CartaoRevolut;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(90, 45);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // tableLayoutPanel19
             // 
             this.tableLayoutPanel19.ColumnCount = 3;
@@ -504,6 +731,19 @@
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel19.Size = new System.Drawing.Size(120, 64);
             this.tableLayoutPanel19.TabIndex = 16;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.CaixaGeral;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(90, 45);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // tableLayoutPanel15
             // 
@@ -568,6 +808,7 @@
             this.button15.TabIndex = 8;
             this.button15.Text = "Transferir dinheiro";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // label6
             // 
@@ -796,6 +1037,19 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(122, 96);
             this.tableLayoutPanel5.TabIndex = 6;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.Paypal2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(67, 51);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -891,6 +1145,21 @@
             this.tableLayoutPanel13.Size = new System.Drawing.Size(71, 96);
             this.tableLayoutPanel13.TabIndex = 13;
             // 
+            // button13
+            // 
+            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button13.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.Definiçoes;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Location = new System.Drawing.Point(20, 31);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(29, 32);
+            this.button13.TabIndex = 7;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel14
             // 
             this.tableLayoutPanel14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -932,151 +1201,6 @@
             this.Atualizar.Enabled = true;
             this.Atualizar.Tick += new System.EventHandler(this.Atualizar_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.Paypal2;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 51);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button13
-            // 
-            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button13.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.Definiçoes;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Location = new System.Drawing.Point(20, 31);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(29, 32);
-            this.button13.TabIndex = 7;
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // DepositoBancario
-            // 
-            this.DepositoBancario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DepositoBancario.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.DepositoBancario;
-            this.DepositoBancario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.DepositoBancario.FlatAppearance.BorderSize = 0;
-            this.DepositoBancario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DepositoBancario.Location = new System.Drawing.Point(33, 3);
-            this.DepositoBancario.Name = "DepositoBancario";
-            this.DepositoBancario.Size = new System.Drawing.Size(82, 78);
-            this.DepositoBancario.TabIndex = 0;
-            this.DepositoBancario.UseVisualStyleBackColor = true;
-            this.DepositoBancario.Click += new System.EventHandler(this.DepositoBancario_Click);
-            // 
-            // Mais
-            // 
-            this.Mais.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Mais.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.Mais;
-            this.Mais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Mais.FlatAppearance.BorderSize = 0;
-            this.Mais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mais.Location = new System.Drawing.Point(387, 3);
-            this.Mais.Name = "Mais";
-            this.Mais.Size = new System.Drawing.Size(82, 78);
-            this.Mais.TabIndex = 10;
-            this.Mais.UseVisualStyleBackColor = true;
-            // 
-            // IContato3
-            // 
-            this.IContato3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IContato3.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.User;
-            this.IContato3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IContato3.FlatAppearance.BorderSize = 0;
-            this.IContato3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IContato3.Location = new System.Drawing.Point(269, 3);
-            this.IContato3.Name = "IContato3";
-            this.IContato3.Size = new System.Drawing.Size(82, 78);
-            this.IContato3.TabIndex = 4;
-            this.IContato3.UseVisualStyleBackColor = true;
-            // 
-            // IContato1
-            // 
-            this.IContato1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IContato1.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.User;
-            this.IContato1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IContato1.FlatAppearance.BorderSize = 0;
-            this.IContato1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IContato1.Location = new System.Drawing.Point(33, 3);
-            this.IContato1.Name = "IContato1";
-            this.IContato1.Size = new System.Drawing.Size(82, 78);
-            this.IContato1.TabIndex = 0;
-            this.IContato1.UseVisualStyleBackColor = true;
-            // 
-            // IContato2
-            // 
-            this.IContato2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IContato2.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.User;
-            this.IContato2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IContato2.FlatAppearance.BorderSize = 0;
-            this.IContato2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IContato2.Location = new System.Drawing.Point(151, 3);
-            this.IContato2.Name = "IContato2";
-            this.IContato2.Size = new System.Drawing.Size(82, 78);
-            this.IContato2.TabIndex = 9;
-            this.IContato2.UseVisualStyleBackColor = true;
-            // 
-            // IContato4
-            // 
-            this.IContato4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IContato4.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.User;
-            this.IContato4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IContato4.FlatAppearance.BorderSize = 0;
-            this.IContato4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IContato4.Location = new System.Drawing.Point(387, 3);
-            this.IContato4.Name = "IContato4";
-            this.IContato4.Size = new System.Drawing.Size(82, 78);
-            this.IContato4.TabIndex = 10;
-            this.IContato4.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.CartaoRevolut;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(90, 45);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackgroundImage = global::TrabalhoContaBancaria.Properties.Resources.CaixaGeral;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(90, 45);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1090,13 +1214,18 @@
             this.Text = "Paypal";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel20.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel21.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
@@ -1104,13 +1233,11 @@
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1172,6 +1299,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
+        private System.Windows.Forms.Button ISolicitar1;
+        private System.Windows.Forms.Label Solicitar1;
+        private System.Windows.Forms.Button ISolicitar2;
+        private System.Windows.Forms.Label Solicitar2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

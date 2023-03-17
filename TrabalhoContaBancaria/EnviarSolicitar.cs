@@ -20,6 +20,8 @@ namespace TrabalhoContaBancaria
     {
         ContaBancaria Conta = new ContaBancaria("Teste", "tomas@gmail.com", "Teste", 10);
         string EmailDestinatario { get; set; }
+
+        bool Solicitacoes = false;
         public EnviarSolicitar()
         {
             InitializeComponent();
@@ -279,8 +281,56 @@ namespace TrabalhoContaBancaria
                     if (Convert.ToDecimal(EmailDestino.Text) >= 0 && Conta.Saldo - Convert.ToDecimal(EmailDestino.Text) >= 0)
                     {
                         Conta.Transferir(Conta.Email, EmailDestinatario, Convert.ToDecimal(EmailDestino.Text));
+                        
+                        if (Solicitacoes == true)
+                        {
+                            List<string> linhasAtualizadas = new List<string>();
+                            // Ler o conteúdo do arquivo em uma variável
+                            string conteudo = File.ReadAllText(@"Solicitacoes.txt");
+
+                            // Dividir o conteúdo em linhas separadas
+                            string[] linhas = conteudo.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
+                            // Loop pelas linhas do arquivo
+                            foreach (string linha in linhas)
+                            {
+                                // Dividir cada linha em suas partes
+                                string[] partes = linha.Split(':');
+
+                                // Verificar se o e-mail corresponde ao e-mail alvo
+                                string LinhaAtualizada = Conta.Email;
+                                if (partes[0] == Conta.Email)
+                                {
+                                    // Atualizar o saldo na linha
+                                    
+                                    for (int i = 1; i <= partes.Length-1; i++)
+                                    {
+                                        
+                                        if (partes[i] == EmailDestinatario+","+ EmailDestino.Text)
+                                        {
+                                            
+                                        }
+                                        else
+                                        {
+                                            LinhaAtualizada += ":"+partes[i];
+                                        }
+                                    }
+                                    linhasAtualizadas.Add(LinhaAtualizada);
+                                }
+                                else
+                                {
+                                    // Armazenar a linha original em uma nova variável
+                                    linhasAtualizadas.Add(linha);
+                                }
+                            }
+
+                            // Escrever as linhas atualizadas de volta no arquivo de bloco de notas
+                            File.WriteAllText(@"Solicitacoes.txt", string.Join(Environment.NewLine, linhasAtualizadas));
+                        }
+                        
                         AtualizarOpcoes();
                         this.Visible = false;
+                        
                         Inicio form = new Inicio();
                         form.Visible = true;
 
@@ -376,6 +426,27 @@ namespace TrabalhoContaBancaria
         private void button11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void AceitarSolicitacoes(string mailDestinatario,decimal quantia)
+        {
+            Solicitacoes = true;
+            EmailDestinatario = mailDestinatario;
+            string mail = Conta.Email;
+            AtualizarOpcoes(mailDestinatario);
+            Titulo1.Text = Conta.Titular;
+            AtualizarOpcoes(mail);
+            Continuar.Visible = true;
+            Cancelar.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            panel1.BorderStyle = BorderStyle.None;
+            tableLayoutPanel3.Visible = false;
+            tableLayoutPanel18.Visible = false;
+            ValidarEmail.Visible = false;
+            Titulo1.TextAlign = ContentAlignment.MiddleCenter;
+            EmailDestino.TextAlign = HorizontalAlignment.Center;
+            EmailDestino.Text = Convert.ToString(quantia);
         }
     }
 }
