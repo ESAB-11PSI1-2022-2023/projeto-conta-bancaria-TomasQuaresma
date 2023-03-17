@@ -61,13 +61,14 @@ namespace TrabalhoContaBancaria
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             try
             {
-
-
-                if (Convert.ToDecimal(textBox1.Text) >= 10)
+                decimal valor = Convert.ToDecimal(textBox1.Text);
+                
+                if (valor >= 10)
                 {
-                    Conta.Depositar(Convert.ToDecimal(textBox1.Text));
+                    Conta.Depositar(valor);
                     AtualizarOpcoes();
                     textBox1.Text = null;
                     this.Visible = false;
@@ -77,9 +78,17 @@ namespace TrabalhoContaBancaria
                     MessageBox.Show("Por favor, insira um número válido maior que 10.");
                 }
             }
-            catch
+            catch (ArgumentException)
             {
-                MessageBox.Show("Os caracteres introduzidos não são validos");
+                MessageBox.Show("O valor inserido não é válido.");
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("O valor inserido é maior do que o máximo permitido.");
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("O texto inserido não está em um formato válido para um número decimal.");
             }
         }
 

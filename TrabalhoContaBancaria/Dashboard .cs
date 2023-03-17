@@ -136,7 +136,7 @@ namespace TrabalhoContaBancaria
                         if (partes.Length - 1 >= 1)
                         {
                             dividir = partes[1].Split(',');
-                            //AtualizarOpcoes(dividir[0]);
+                            AtualizarOpcoes(dividir[0]);
                             ISolicitar1.Tag = dividir[0] + "," + dividir[1];
                             Solicitar1.Text = Conta.Titular + " solicitou " + dividir[1] + " Eur";
                         }
@@ -148,7 +148,7 @@ namespace TrabalhoContaBancaria
                         if (partes.Length - 1 >= 2)
                         {
                             dividir = partes[2].Split(',');
-                            //AtualizarOpcoes(dividir[0]);
+                            AtualizarOpcoes(dividir[0]);
                             ISolicitar2.Tag = dividir[0] + "," + dividir[1];
                             Solicitar2.Text = Conta.Titular + " solicitou " + dividir[1] + " Eur";
                         }

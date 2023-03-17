@@ -15,7 +15,8 @@ namespace TrabalhoContaBancaria
 {
     public partial class Depositos : Form
     {
-        ContaBancaria Conta = new ContaBancaria("Teste", "tomas@gmail.com", "Teste", 0);
+        ContaBancaria Conta = new ContaBancaria("Teste", "Teste", "Teste", 0);
+
         public Depositos()
         {
             InitializeComponent();
@@ -25,16 +26,25 @@ namespace TrabalhoContaBancaria
         {
 
         }
+
+        // Método para receber informações de uma conta bancária a partir do email
         public void ReceberInformacoes(string mail)
         {
+            // Ler todas as linhas do arquivo "Contas.txt" e armazená-las num array de strings
             string[] linhas = File.ReadAllLines(@"Contas.txt");
+
             foreach (string linha in linhas)
             {
                 string[] valores = linha.Split(':');
+
+                // Verificar se o email da linha atual corresponde ao email recebido como argumento
                 if (valores[0].Equals(mail))
                 {
                     string[] nome = valores[2].Split(' ');
+
+                    // Criar um novo objeto ContaBancaria com os valores lidos do arquivo
                     Conta = new ContaBancaria(valores[1], valores[0], nome[0], Convert.ToDecimal(valores[3]));
+
                     return;
                 }
             }
@@ -42,24 +52,30 @@ namespace TrabalhoContaBancaria
 
         private void Aplicar_Click(object sender, EventArgs e)
         {
-            try { 
-            if (Convert.ToDecimal(textBox1.Text) >= 10 && Conta.Saldo - Convert.ToDecimal(textBox1.Text)>=0)
+            try
             {
-                Conta.Levantar(Convert.ToDecimal(textBox1.Text));
-                textBox1.Text = null;
-                AtualizarOpcoes();
-                this.Visible = false;
+                // Verificar se o valor introduzido na caixa de texto é maior ou igual a 10 e se a conta tem saldo suficiente
+                if (Convert.ToDecimal(textBox1.Text) >= 10 && Conta.Saldo - Convert.ToDecimal(textBox1.Text) >= 0)
+                {
+                    // Fazer um levantamento na conta com o valor introduzido
+                    Conta.Levantar(Convert.ToDecimal(textBox1.Text));
+
+                    textBox1.Text = null;
+                    AtualizarOpcoes();
+                    this.Visible = false;
+                }
+                else
+                {
+                    // Se as condições não forem satisfeitas, mostrar uma mensagem de erro
+                    MessageBox.Show("Não foi possivel realizar a operação");
+                }
             }
-            else
-            {
-                MessageBox.Show("Não foi possivel realizar a operação");
-            }
-        }
             catch
             {
+                // Se ocorrer uma exceção ao tentar converter o valor da caixa de texto para decimal, mostrar uma mensagem de erro
                 MessageBox.Show("Os caracteres introduzidos não são validos");
             }
-}
+        }
 
         public void AtualizarOpcoes()
         {
@@ -97,7 +113,6 @@ namespace TrabalhoContaBancaria
 
             // Escrever as linhas atualizadas de volta no arquivo de bloco de notas
             File.WriteAllText(@"Contas.txt", string.Join(Environment.NewLine, linhasAtualizadas));
-
         }
     }
 }
