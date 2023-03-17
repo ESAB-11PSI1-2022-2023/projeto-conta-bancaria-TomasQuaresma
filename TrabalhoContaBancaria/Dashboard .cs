@@ -24,24 +24,33 @@ namespace TrabalhoContaBancaria
 
         public void AtualizarOpcoes(string mail)
         {
+            // Cria uma matriz para armazenar as linhas do arquivo de texto.
             string[] linhas;
+
+            // Abre o arquivo de texto para leitura.
             using (StreamReader sr = new StreamReader("Contas.txt"))
             {
+                // Lê todo o conteúdo do arquivo e divide as linhas em uma matriz de strings.
                 linhas = sr.ReadToEnd().Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             }
 
+            // Percorre cada linha do arquivo.
             foreach (string linha in linhas)
             {
                 string[] valores = linha.Split(':');
+
+                // Verifica se o email encontrado é igual ao email fornecido.
                 if (valores[0].Equals(mail))
                 {
-                    
+                    // Atualiza a conta bancária do usuário com os valores encontrados no arquivo.c
                     Conta = new ContaBancaria(valores[1], valores[0], valores[2], Convert.ToDecimal(valores[3]));
                     return;
                 }
             }
 
         }
+
+        // Atualiza a conta bancária do usuário com os valores encontrados no arquivo.
         public void AtualizarSaldo()
         {
             Saldo.Text = Conta.Saldo + " EUR";
@@ -51,6 +60,8 @@ namespace TrabalhoContaBancaria
         {
             
             string[] nome = Conta.Titular.Split(' ');
+
+            // Define a saudação do usuário com base na hora atual.
             switch (DateTime.Now.Hour)
             {
                 case int Dia when Dia >= 0 && Dia < 12:
@@ -64,33 +75,39 @@ namespace TrabalhoContaBancaria
                     break;
             }
 
+            // Atualiza o saldo na interface do usuário.
             AtualizarSaldo();
 
-            // Cria uma lista vazia
+            // Cria uma lista vazia de contatos.
             List<string> lista = new List<string>();
 
-            // Abre o arquivo para leitura
+            // Abre o arquivo de texto para leitura.
             using (StreamReader sr = new StreamReader(@"Contactos.txt"))
             {
-                // Lê cada linha do arquivo
+                // Lê cada linha do arquivoc
                 string linha;
                 while ((linha = sr.ReadLine()) != null)
                 {
-                    // Separa o e-mail e os elementos associados
                     string[] partes = linha.Split(':');
+
+                    // Lê cada linha do arquivo.
                     string email = Conta.Email;
                     try
                     {
                         string mail = Conta.Email;
+
                         AtualizarOpcoes(partes[1]);
                         Contato1.Text = Conta.Titular;
                         AtualizarOpcoes(email);
+
                         AtualizarOpcoes(partes[2]);
                         Contato2.Text = Conta.Titular;
                         AtualizarOpcoes(email);
+
                         AtualizarOpcoes(partes[3]);
                         Contato3.Text = Conta.Titular;
                         AtualizarOpcoes(email);
+
                         AtualizarOpcoes(partes[4]);
                         Contato4.Text = Conta.Titular;
                         AtualizarOpcoes(email);
@@ -158,8 +175,7 @@ namespace TrabalhoContaBancaria
                             Solicitar2.Visible = false;
                         }
                             
-                            //AtualizarOpcoes(email);
-
+                            AtualizarOpcoes(email);
                     }
                     
                 }
