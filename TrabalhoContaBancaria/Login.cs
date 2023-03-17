@@ -19,6 +19,9 @@ namespace TrabalhoContaBancaria
         int Y = 0;
         string Email { get; set; }
         string Password { get; set; }
+        string Nome { get; set; }
+
+        bool NovaConta = false;
 
         //Ativar Arredondar Cantos
         public enum DWMWINDOWATTRIBUTE
@@ -103,15 +106,64 @@ namespace TrabalhoContaBancaria
                     Mostrar.Visible= true;
                     Email = TextBox1.Text;
                     TextBox1.Text = null;
-                    TextBox1.PasswordChar = '●';
-                    Botao1.Text = "Iniciar sessão";
-                    label3.Text = "Palavra-passe";
                     
+                    if(CriarConta.Visible==true)
+                    {
+                        Botao1.Text = "Iniciar sessão";
+                        TextBox1.PasswordChar = '●';
+                        label3.Text = "Coloque a password";
+                        CriarConta.Visible = false;
+                        label2.Visible = false;
+                    }
+                    else
+                    {
+                        Botao1.Text = "Continuar";
+                        label3.Text = "Coloque o nome";
+                    }
+                    
+                    
+                    break;
+                case "Continuar":
+                    if(TextBox1.Text!=null)
+                    {
+                        Nome = TextBox1.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nome Invalido");
+                    }
+                    
+                    TextBox1.Text = null;
+                    Botao1.Text = "Iniciar sessão";
+                    TextBox1.PasswordChar = '●';
+                    label3.Text = "Coloque a password";
+
                     break;
                 case "Iniciar sessão":
                     Password = TextBox1.Text;
+                    
                     try
                     {
+                        if (NovaConta == true)
+                        {
+                            using (StreamWriter writer = new StreamWriter(@"Login.txt", true))
+                            {
+                                writer.WriteLine(Email+":"+Password);
+                            }
+                            using (StreamWriter writer = new StreamWriter(@"Contactos.txt", true))
+                            {
+                                writer.WriteLine(Email);
+                            }
+                            using (StreamWriter writer = new StreamWriter(@"Solicitacoes.txt", true))
+                            {
+                                writer.WriteLine(Email);
+                            }
+                            using (StreamWriter writer = new StreamWriter(@"Contas.txt", true))
+                            {
+                                Random random = new Random();
+                                writer.WriteLine(Email + ":" + random.Next(10000, 99999)+":"+Nome+":"+"0");
+                            }
+                        }
                         string[] linhas = File.ReadAllLines(@"Login.txt");
                         foreach (string linha in linhas)
                         {
@@ -140,6 +192,7 @@ namespace TrabalhoContaBancaria
                     {
                         MessageBox.Show("Erro ao ler o arquivo: " + ex.Message);
                     }
+                    
                     break;
             }
         }
@@ -179,6 +232,13 @@ namespace TrabalhoContaBancaria
                     TextBox1.PasswordChar = '●';
                     break;
             }
+        }
+
+        private void CriarConta_Click(object sender, EventArgs e)
+        {
+            NovaConta = true;
+            CriarConta.Visible= false;
+            label2.Visible = false;
         }
     }
 }

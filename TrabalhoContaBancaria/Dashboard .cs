@@ -49,6 +49,7 @@ namespace TrabalhoContaBancaria
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             string[] nome = Conta.Titular.Split(' ');
             switch (DateTime.Now.Hour)
             {
@@ -77,25 +78,29 @@ namespace TrabalhoContaBancaria
                 {
                     // Separa o e-mail e os elementos associados
                     string[] partes = linha.Split(':');
-                    string email = partes[0];
+                    string email = Conta.Email;
                     try
                     {
                         string mail = Conta.Email;
                         AtualizarOpcoes(partes[1]);
                         Contato1.Text = Conta.Titular;
+                        AtualizarOpcoes(email);
                         AtualizarOpcoes(partes[2]);
                         Contato2.Text = Conta.Titular;
+                        AtualizarOpcoes(email);
                         AtualizarOpcoes(partes[3]);
                         Contato3.Text = Conta.Titular;
+                        AtualizarOpcoes(email);
                         AtualizarOpcoes(partes[4]);
                         Contato4.Text = Conta.Titular;
-
+                        AtualizarOpcoes(email);
+                        
                     }
                     catch
                     {
 
                     }
-
+                    
                     if (Contato1.Text == "")
                     {
                         IContato1.Visible = false;
@@ -114,7 +119,7 @@ namespace TrabalhoContaBancaria
                     }
                 }
             }
-
+            
             // Abre o arquivo para leitura
             using (StreamReader sr = new StreamReader(@"Solicitacoes.txt"))
             {
@@ -124,14 +129,14 @@ namespace TrabalhoContaBancaria
                 {
                     // Separa o e-mail e os elementos associados
                     string[] partes = linha.Split(':');
-                    string email = partes[0];
+                    string email = Conta.Email;
                     if (partes[0] == Conta.Email)
                     {
                         string[] dividir;
                         if (partes.Length - 1 >= 1)
                         {
                             dividir = partes[1].Split(',');
-                            AtualizarOpcoes(dividir[0]);
+                            //AtualizarOpcoes(dividir[0]);
                             ISolicitar1.Tag = dividir[0] + "," + dividir[1];
                             Solicitar1.Text = Conta.Titular + " solicitou " + dividir[1] + " Eur";
                         }
@@ -143,7 +148,7 @@ namespace TrabalhoContaBancaria
                         if (partes.Length - 1 >= 2)
                         {
                             dividir = partes[2].Split(',');
-                            AtualizarOpcoes(dividir[0]);
+                            //AtualizarOpcoes(dividir[0]);
                             ISolicitar2.Tag = dividir[0] + "," + dividir[1];
                             Solicitar2.Text = Conta.Titular + " solicitou " + dividir[1] + " Eur";
                         }
@@ -153,12 +158,13 @@ namespace TrabalhoContaBancaria
                             Solicitar2.Visible = false;
                         }
                             
-                            AtualizarOpcoes(email);
+                            //AtualizarOpcoes(email);
 
                     }
                     
                 }
             }
+            
         }
 
         private void CarregarMultibanco_MouseEnter(object sender, EventArgs e)

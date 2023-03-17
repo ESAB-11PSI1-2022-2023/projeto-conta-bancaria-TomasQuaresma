@@ -135,6 +135,7 @@
             this.CriarConta.TabIndex = 3;
             this.CriarConta.Text = "Criar Conta";
             this.CriarConta.UseVisualStyleBackColor = true;
+            this.CriarConta.Click += new System.EventHandler(this.CriarConta_Click);
             // 
             // label2
             // 
