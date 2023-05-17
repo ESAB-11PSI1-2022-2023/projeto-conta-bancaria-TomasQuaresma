@@ -35,7 +35,7 @@
   <br>
   <br>
  <p align="center">
-  <img src="https://i.imgur.com/j8ohOI4.png" width="950" height="550"</>
+  <img src="https://i.imgur.com/j8ohOI4.png" width="850" height="500"</>
 </p>
   <br>
   <br>
@@ -49,7 +49,7 @@
   <br>
   <br>
   <p align="center">
-  <img src="https://i.imgur.com/klVhZCn.png" width="950" height="550"</>
+  <img src="https://i.imgur.com/klVhZCn.png" width="850" height="500"</>
 </p>
   <br>
   <br>
@@ -63,7 +63,7 @@
   <br>
   <br>
   <p align="center">
-  <img src="https://i.imgur.com/NVAJ3A5.png" width="950" height="550"</>
+  <img src="https://i.imgur.com/NVAJ3A5.png" width="850" height="500"</>
 </p>
   <div>
     <br>
@@ -77,7 +77,7 @@
   <br>
   <br>
   <p align="center">
-  <img src="https://i.imgur.com/4lxoAFp.png" width="950" height="550"</>
+  <img src="https://i.imgur.com/4lxoAFp.png" width="850" height="500"</>
 </p>
   <br>
   <br>
