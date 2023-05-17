@@ -41,7 +41,7 @@
   <br>
   <div>
    <img align="left" src="https://cdn-icons-png.flaticon.com/128/3916/3916928.png" width="25" height="25">
-    Ao selecionar a opção de depósito, o usuário deve informar o valor que deseja depositar na sua conta. O programa irá adicionar ao saldo da conta bancária o valor informado.
+    Ao selecionar a opção de depósito, o usuário deve informar o valor que deseja depositar na sua conta. <br>O programa irá adicionar ao saldo da conta bancária o valor informado.
 </div>
   <br>
   <br>
@@ -55,7 +55,7 @@
   <br>
   <div>
    <img align="left" src="https://cdn-icons-png.flaticon.com/128/3916/3916928.png" width="25" height="25">
-    Ao selecionar a opção de envio, o usuário deve informar o valor que deseja enviar e o destinatário da transação. O programa irá verificar se o saldo da conta é suficiente para realizar a transação e atualizará os saldos das contas envolvidas.
+    Ao selecionar a opção de envio, o usuário deve informar o valor que deseja enviar e o destinatário da transação. <br>O programa irá verificar se o saldo da conta é suficiente para realizar a transação e atualizará os saldos das contas envolvidas.
 </div>
   <br>
   <br>
@@ -65,11 +65,16 @@
   <p align="center">
   <img src="https://i.imgur.com/NVAJ3A5.png" width="850" height="500"</>
 </p>
+  <br>
+    <br>
   <div>
-    <br>
-    <br>
    <img align="left" src="https://cdn-icons-png.flaticon.com/128/3916/3916928.png" width="25" height="25">
-    Ao selecionar a opção de solicitação, o usuário pode solicitar dinheiro de um outro usuário. Para isso, é necessário informar o valor e o destinatário da solicitação. O destinatário receberá uma notificação da solicitação e poderá optar por aceitar ou recusar.
+    Ao selecionar a opção de solicitar, o usuário pode solicitar dinheiro de um outro usuário.Para isso, é necessário informar o valor e o destinatário da solicitação.
+</div>
+  <br>
+  <div>
+   <img align="left" src="https://cdn-icons-png.flaticon.com/128/3916/3916928.png" width="25" height="25">
+    O destinatário receberá uma notificação da solicitação e poderá optar por aceitar ou recusar.
 </div>
   <br>
   <br>
